@@ -1,5 +1,5 @@
 import React from 'react';
-// import './App.css';
+import './App.css';
 import Clock from './components/Clock';
 import GeoLocation from './components/GeoLocation';
 
