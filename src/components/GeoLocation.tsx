@@ -20,18 +20,18 @@ class GeoLocation extends Component<AcceptedProps, LocationState> {
     }
 
     componentWillMount() {
-        console.log("Will Mount");
+        // console.log("Will Mount");
     }
     
     componentDidMount() {
         this.fetchLocation();
-        console.log("Mounted",this.state);
+        // console.log("Mounted",this.state);
     }
 
     fetchLocation = () => {
         
         navigator.geolocation.getCurrentPosition((position) => {
-            console.log("Position",position.coords.latitude, position.coords.longitude)
+            // console.log("Position",position.coords.latitude, position.coords.longitude)
 
             this.setState({
                 latitude: position.coords.latitude,

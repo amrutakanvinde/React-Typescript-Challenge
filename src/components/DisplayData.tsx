@@ -1,8 +1,11 @@
 import React, { FunctionComponent } from 'react';
+import { PropsWeatherData } from './Interface';
 
 type propsData = {
-    data: any
+    data: PropsWeatherData
 }
+
+
 
 const DisplayData: FunctionComponent<propsData> = (props) => {
     console.log("Dsiplay",props.data);
@@ -15,10 +18,10 @@ const DisplayData: FunctionComponent<propsData> = (props) => {
     return(
         <div>
             <h2>Weather Info</h2>
-            {/* <p>You are in the timezone {props.data.timezone}</p> */}
-            <p>Your current temperature is {props.data.temp}</p>
-            <p>But it feels like {props.data.feels_like}</p>
-            <p>The humidity is {props.data.humidity}</p>
+            <p>You are in the timezone {props.data.timezone}</p>
+            <p>Your current temperature is {props.data.current.temp}</p>
+            <p>But it feels like {props.data.current.feels_like}</p>
+            <p>The humidity is {props.data.current.humidity}</p>
         </div>
     )
 }
